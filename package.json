@@ -1,0 +1,43 @@
+{
+  "name": "as-react-hoc",
+  "version": "0.0.1",
+  "description": "as-react-hoc",
+  "main": "dist/index.js",
+  "repository": "git@github.com:dev-cprice/as-react-hoc.git",
+  "homepage": "https://github.com/dev-cprice/as-react-hoc",
+  "author": "Cody Price <dev.cprice@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.0"
+  },
+  "keywords": [
+    "react",
+    "hoc"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "prettier": "^1.16.4",
+    "react": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "scripts": {
+    "compile": "babel src --out-dir dist --copy-files",
+    "precompile": "rm -rf dist",
+    "prepublishOnly": "yarn run compile"
+  }
+}
